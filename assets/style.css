@@ -1,0 +1,19 @@
+* {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+.forecast {
+    height: 130px;
+    background-color: rgb(56, 49, 80);
+    color: rgb(255, 255, 255);
+}
+
+.col-2 {
+    width: 20%;
+    height: 45%;
+}
