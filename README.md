@@ -1,18 +1,29 @@
-# 5dayForecast
-Weather dashboard that shows temp, wind &amp; humidity in one of eight cities 
+### 5dayForecast
+The Weather Dashboard is a web application that allows users to search for the current weather and a 5-day forecast for a specific city. It uses the OpenWeatherMap API to retrieve weather data and displays it in an organized and user-friendly manner.
 
-# User Story
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+## Features
+# City Search: 
+Users can enter the name of a city in the search input field and click the "Search" button to retrieve weather information.
 
-# Acceptance Criteria
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+# Search History: 
+The application keeps track of previously searched cities, and users can easily access their search history.
+
+# Current Weather Display: 
+The current weather for the searched city is displayed, including the city name, date, temperature, wind speed, humidity, and an icon representing the weather condition.
+
+# 5-Day Forecast: 
+A 5-day weather forecast is provided, showing the date, weather icon, temperature, wind speed, and humidity for each day.
+
+## JavaScript Explanation
+The JavaScript code in this application is responsible for the following functionality:
+
+* Weather Data Retrieval: The performSearch() function handles user input, retrieves weather data from the OpenWeatherMap API, and updates the DOM to display the current weather and forecast.
+
+* Search History: The renderHistory() function manages the search history by creating buttons for previously searched cities. Clicking on these buttons triggers new searches.
+
+* Forecast Rendering: The renderForecast() function takes the retrieved forecast data and updates the DOM to display the 5-day weather forecast.
+
+* Event Listeners: Event listeners are used to trigger the performSearch() function when the "Search" button is clicked and to handle the selection of search history buttons.
+
+# Screenshot
+![](assets/image.png)
