@@ -8,61 +8,80 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- Bootstrap CSS and JavaScript libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <!-- link dayjs for time -->
+    <!-- Day.js JavaScript library -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
-        </script>
+    </script>
 </head>
 
 <body>
+    <!-- Container for the entire page content -->
     <div class="container">
-    <nav class="navbar bg-primary">
-        <div class="container-fluid ">
-            <span class="navbar-brand fs-2 mb-0 h1 mx-auto text-white">Weather Dashboard</span>
-        </div>
-    </nav>
+        <!-- Navigation bar -->
+        <nav class="navbar bg-primary">
+            <div class="container-fluid ">
+                <!-- Page title in the center of the navbar -->
+                <span class="navbar-brand fs-2 mb-0 h1 mx-auto text-white">Weather Dashboard</span>
+            </div>
+        </nav>
 
-    <div class="row">
-        <div class="col-12 col-md-4 row">
-            <h2>Search for a city:</h2>
-            <div class="input-group mb-3 col-12">
-                <input id="cityToSearch" type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default" placeholder="Search City">
+        <!-- Two-column layout: Search on the left, Weather display on the right -->
+        <div class="row">
+            <!-- Left column for search input and history -->
+            <div class="col-12 col-md-4 row">
+                <!-- Heading for the search section -->
+                <h2>Search for a city:</h2>
+                <!-- Input field for city search -->
+                <div class="input-group mb-3 col-12">
+                    <input id="cityToSearch" type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Search City">
+                </div>
+                <!-- Search button -->
+                <button id="searchBtn" type="button" class="btn btn-primary mx-auto mb-2">Search</button>
+                <!-- Horizontal line -->
+                <hr>
+                <!-- Heading for search history -->
+                <h3>Search History</h3>
+                <!-- Display search history here -->
+                <p id="history"></p>
             </div>
-            <button id="searchBtn" type="button" class="btn btn-primary mx-auto mb-2" placeholder="City Name">Search</button>
-            <hr>
-            <h3>Search History</h3>
-            <p id="history"></p>
-            
-        </div>
-        <div class="col-12 col-md-8 row">
-            <div class="current border m-3 border-dark-subtle border-2 col-12">
-                <h2>
-                    <span id="city-name">City Name</span> 
-                    <img id="weather-icon"/>
-                </h2>
-                <h2>
-                    <span id="current-date"></span> 
-                </h2>
-                <!-- <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon"/> -->
-                <p id="temp">Temp: </p>
-                <p id="wind">Wind: </p>
-                <p id="humid">Humidity: </p>
-            </div>
-            <div class="row">
-                <!-- <div class="col-12">
-                    <h3>5-Day Forecast:</h3> -->
+
+            <!-- Right column for current weather and 5-day forecast -->
+            <div class="col-12 col-md-8 row">
+                <!-- Current weather display -->
+                <div class="current border m-3 border-dark-subtle border-2 col-12">
+                    <!-- City name and weather icon -->
+                    <h2>
+                        <span id="city-name">City Name</span>
+                        <img id="weather-icon" />
+                    </h2>
+                    <!-- Current date -->
+                    <h2>
+                        <span id="current-date"></span>
+                    </h2>
+                    <!-- Temperature, wind, and humidity information -->
+                    <p id="temp">Temp: </p>
+                    <p id="wind">Wind: </p>
+                    <p id="humid">Humidity: </p>
+                </div>
+
+                <!-- Forecast section with 5 columns for each day -->
+                <div class="row">
+                    <!-- Navbar for the forecast section -->
                     <nav class="navbar bg-white">
                         <div class="container-fluid">
+                            <!-- Heading for the 5-day forecast -->
                             <span class="navbar-brand fs-3 mb-0 fw-bold">5-Day Forecast:</span>
                         </div>
                     </nav>
                 </div>
+                <!-- Each column represents one day's forecast -->
                 <div class="forecast col-2 m-3">
                     <p id="date-0"></p>
                     <p id="icon-0"></p>
@@ -98,11 +117,10 @@
                     <p id="wind-4"></p>
                     <p id="humid-4"></p>
                 </div>
-                
             </div>
         </div>
     </div>
-</div>
+    <!-- JavaScript file for functionality -->
     <script src="develop/script.js"></script>
 </body>
 

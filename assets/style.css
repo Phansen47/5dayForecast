@@ -1,19 +1,23 @@
+/* Set the font family for all elements */
 * {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Style for elements with class "heading" */
 .heading {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
+/* Style for elements with class "forecast" */
 .forecast {
     height: 130px;
     background-color: rgb(56, 49, 80);
     color: rgb(255, 255, 255);
 }
 
+/* Style for elements with class "col-2" */
 .col-2 {
-    width: 20%;
-    height: 45%;
+    width: 20%; 
+    height: 45%; 
 }
